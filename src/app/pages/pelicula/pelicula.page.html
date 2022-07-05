@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pelicula</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let pelicula of (peliculas | async)?.results" (click)="openDetails(pelicula)">
+      {{ pelicula.title }}
+    </button>
+  </ion-list>
+</ion-content>
